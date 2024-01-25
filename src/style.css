@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Academy Engraved';
+    src: url('./Academy Engraved.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    font-family: 'Academy Engraved';
+    background: url('./icon.png');
+}
