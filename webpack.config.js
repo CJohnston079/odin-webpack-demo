@@ -3,12 +3,23 @@ const toml = require('toml');
 const yaml = require('yamljs');
 const json5 = require('json5');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            title: 'Webpack 5 HTML Plugin',
+            filename: 'index.html',
+            inject: 'head',
+            scriptLoading: 'defer',
+        })
+    ],
     module: {
         rules: [
             {
